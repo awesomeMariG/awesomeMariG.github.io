@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+canvas{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+
+.head_pic {
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transform: translate(calc(50vw - 80px), calc(50vh - 80px));
+}
