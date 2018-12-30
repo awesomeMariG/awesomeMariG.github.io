@@ -15,4 +15,5 @@ canvas{
   height: 150px;
   position: absolute;
   transform: translate(calc(50vw - 80px), calc(50vh - 90px));
+  box-shadow: 0px 0px 20px 10px white;
 }
