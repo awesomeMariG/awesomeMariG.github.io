@@ -5,7 +5,7 @@ var c = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 let numStars = 200;
-let starRadius = 50;
+let starRadius = Math.round(canvas.width/24);
 let stars = [];
 let maxStarSpeed = .3;
 let opacityLevel = .05;
@@ -27,9 +27,12 @@ window.addEventListener("resize", function() {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(function(){
     stars = [];
+    starRadius = Math.round(canvas.width/22);
+    starRadius = starRadius > 45 ? 45 : starRadius;
     for(var i =0; i< numStars; i++) {
       stars[i] = makeStar();
     }
+    console.log(starRadius);
   }, 300);
 });
 
@@ -120,7 +123,7 @@ function makeStar(){
   radius = Math.round(Math.random() * starRadius);
   radius = radius < 1 ? 1 : radius;
   randomX = Math.round(Math.random() * (canvas.width - 2*radius) + radius);
-  randomY = Math.round(Math.random() * (canvas.width - 2*radius) + radius);
+  randomY = Math.round(Math.random() * (canvas.height - 2*radius) + radius);
   opacity = Math.round(Math.random()* 10)/10;
   speed = Math.random() * maxStarSpeed;
   speed = speed < 0.1 ? 0.1 : speed;

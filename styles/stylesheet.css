@@ -14,5 +14,5 @@ canvas{
   width: 150px;
   height: 150px;
   position: absolute;
-  transform: translate(calc(50vw - 80px), calc(50vh - 80px));
+  transform: translate(calc(50vw - 80px), calc(50vh - 90px));
 }
