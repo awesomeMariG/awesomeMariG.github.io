@@ -4,7 +4,7 @@ canvas.width = window.innerWidth;
 var c = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
-let numStars = 200;
+let numStars = 150;
 let starRadius = Math.round(canvas.width/24);
 let stars = [];
 let maxStarSpeed = .3;
@@ -105,7 +105,7 @@ function updateOpacity(star){
         this.updating = false;
         clearInterval(opacityTimer);
       }
-      else this.opacity += 0.01;
+      else this.opacity += 0.02;
     }.bind(star),100);
   } else {
     opacityTimer = setInterval(function(){
@@ -114,7 +114,7 @@ function updateOpacity(star){
         this.updating = false;
         clearInterval(opacityTimer);
       }
-      else this.opacity -= 0.01;
+      else this.opacity -= 0.02;
     }.bind(star),100);
   }
 }
